@@ -84,3 +84,158 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+@media print {
+  body {
+    background: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .bg-zinc-300 {
+    background: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .shadow-3xl {
+    box-shadow: none !important;
+  }
+
+  .bg-white {
+    background: white !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: none !important;
+  }
+
+  /* Header specific styles */
+  header.bg-gray-900 {
+    background: #1a202c !important;
+    padding: 1.5rem 1.5rem 0 !important;
+    margin: 0 !important;
+    color: white !important;
+    print-color-adjust: exact !important;
+  }
+
+  header .mb-2 {
+    margin-bottom: 0.5rem !important;
+  }
+
+  header h1 {
+    font-size: 2.5rem !important;
+    color: white !important;
+    margin-bottom: 0.25rem !important;
+  }
+
+  header h2 {
+    font-size: 1.25rem !important;
+    color: rgb(165, 180, 252) !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  header p {
+    font-size: 1rem !important;
+    color: rgb(209, 213, 219) !important;
+    margin-bottom: 1rem !important;
+    line-height: 1.5 !important;
+  }
+
+  header .bg-black {
+    background: black !important;
+    border-top: 1px solid white !important;
+    padding: 1rem 1.5rem !important;
+    margin: 1rem -1.5rem 0 !important;
+    border-top-left-radius: 1.5rem !important;
+    border-top-right-radius: 1.5rem !important;
+  }
+
+  header img {
+    width: 150px !important;
+    height: 150px !important;
+    margin-top: 0 !important;
+  }
+
+  header .text-white {
+    color: white !important;
+  }
+
+  header .text-gray-300 {
+    color: rgb(209, 213, 219) !important;
+  }
+
+  header .text-indigo-300 {
+    color: rgb(165, 180, 252) !important;
+  }
+
+  /* Main content adjustments */
+  main {
+    padding: 1.5rem !important;
+    margin-top: 0 !important;
+    page-break-before: avoid !important;
+    break-before: avoid !important;
+  }
+
+  .grid {
+    display: grid !important;
+    grid-template-columns: 2fr 1fr !important;
+    gap: 1.5rem !important;
+    page-break-before: avoid !important;
+    break-before: avoid !important;
+  }
+
+  /* Reduce spacing */
+  .space-y-6 {
+    margin-top: 0 !important;
+  }
+
+  .p-6, .p-8 {
+    padding: 1rem !important;
+  }
+
+  /* Adjust text sizes for print */
+  h1, h2, h3 {
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+  }
+
+  p {
+    margin-bottom: 0.25rem !important;
+    line-height: 1.5 !important;
+  }
+
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  /* Ensure good page breaks */
+  section {
+    break-inside: avoid-page !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Font Awesome icons in header */
+  header svg {
+    color: white !important;
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+  /* Contact info grid */
+  header .grid-cols-2 {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 1rem !important;
+  }
+
+  /* Ensure content flows properly */
+  #__next, main > div {
+    page-break-before: avoid !important;
+    break-before: avoid !important;
+  }
+}
