@@ -209,8 +209,10 @@ export default function Resume() {
             {/* Right Column */}
             <div className="space-y-8">
               <SkillsSection />
-              <TechnicalSkillsSection />
+              <EducationSection />
+              <PublicationsSection />
               <CertificationsSection />
+              <TechnicalSkillsSection />
             </div>
           </div>
         </main>
@@ -276,7 +278,7 @@ function WorkExperience({
   contact
 }: WorkExperienceProps) {
   return (
-    <div className="mb-8">
+    <div className="mb-8 pb-8 border-b border-gray-200 last:border-b-0 last:pb-0 last:mb-0">
       <div className="flex justify-between items-baseline">
         <h3 className="text-xl font-bold font-display tracking-tight">{company}</h3>
         <span className="text-gray-600 font-medium">{period}</span>
@@ -391,6 +393,42 @@ function CertificationsSection() {
       period: "(08/2020 - 08/2023)",
       issuer: "Amazon Web Services USA",
       license: "6HGFNE21FJRQ1JKM"
+    },
+    {
+      title: "AWS Certified SysOps Administrator Associate SOA-C01",
+      period: "(09/2020 - 09/2023)",
+      issuer: "Amazon Web Services, USA",
+      license: "6HGFNE21FJRQ1JKM"
+    },
+    {
+      title: "AWS Solutions Architect Associate SAAC01",
+      period: "(02/2020 - 02/2023)",
+      issuer: "Amazon Web Services, USA",
+      license: "76KY3TD1HBQQ143"
+    },
+    {
+      title: "ISC2 Certified Cloud Security Professional",
+      period: "(01/2023 - 12/2025)",
+      license: "841568",
+      licenseLabel: "Certificate Number"
+    },
+    {
+      title: "Certified Data Privacy Solutions Engineer™ (CPDSE)",
+      period: "(08/2022 - 07/2025)"
+    },
+    {
+      title: "Project Management Professional (PMP)®",
+      period: "(01/2023 - 01/2026)",
+      license: "3416286",
+      licenseLabel: "PMP Number"
+    },
+    {
+      title: "Offensive Security Certified Professional",
+      period: "(07/2013 - 06/2015)"
+    },
+    {
+      title: "ISACA Certified Information Security Manager (CISM)",
+      period: "(12/2020 - 02/2023)"
     }
   ];
 
@@ -404,9 +442,80 @@ function CertificationsSection() {
           <div key={index}>
             <h3 className="font-bold font-display">{`${index + 1}. ${cert.title}`}</h3>
             <p className="text-gray-600">{cert.period}</p>
-            <p className="text-gray-500 text-sm leading-relaxed">
-              {cert.issuer} (License: {cert.license})
+            {(cert.issuer || cert.license) && (
+              <p className="text-gray-500 text-sm leading-relaxed">
+                {cert.issuer && `${cert.issuer} `}
+                {cert.license && `(${cert.licenseLabel || 'License'}: ${cert.license})`}
+              </p>
+            )}
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function EducationSection() {
+  const education = [
+    {
+      degree: "Master of Computer Applications (M.C.A.)",
+      university: "Sikkim Manipal University",
+      period: "08/2011 - 03/2013",
+      location: "New Delhi, India"
+    },
+    {
+      degree: "Bachelor of Computer Applications (B.C.A)",
+      university: "Guru Gobind Singh Indraprastha University",
+      period: "08/2007 - 05/2010",
+      location: "New Delhi, India"
+    }
+  ];
+
+  return (
+    <section>
+      <h2 className="text-2xl font-bold font-display mb-6 py-2 px-4 bg-gray-900 text-white rounded-lg shadow-md uppercase tracking-wide">
+        Education
+      </h2>
+      <div className="space-y-4">
+        {education.map((edu, index) => (
+          <div key={index}>
+            <h3 className="font-bold font-display">{edu.degree}</h3>
+            <p className="text-gray-700">{edu.university}</p>
+            <p className="text-gray-600 text-sm">
+              {edu.period}, {edu.location}
             </p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function PublicationsSection() {
+  const publications = [
+    {
+      title: "Kali Linux Intrusion and Exploitation Cookbook",
+      authors: ["Ishan Girdhar", "Dhruv Shah"],
+      date: "April 21, 2017",
+      publisher: "Packt Publishing",
+      formats: ["Hardcopy", "Paperback", "Kindle"],
+      description: "Authored 'Kali Linux Intrusion and Exploitation Cookbook' ideal for system administrators and system architects. Published by Packt Pub, Available on Amazon."
+    }
+  ];
+
+  return (
+    <section>
+      <h2 className="text-2xl font-bold font-display mb-6 py-2 px-4 bg-gray-900 text-white rounded-lg shadow-md uppercase tracking-wide">
+        Publications
+      </h2>
+      <div className="space-y-4">
+        {publications.map((pub, index) => (
+          <div key={index}>
+            <h3 className="font-bold font-display">{pub.title}</h3>
+            <p className="text-gray-700">By {pub.authors.join(", ")}</p>
+            <p className="text-gray-600 text-sm">{pub.date} • {pub.publisher}</p>
+            <p className="text-gray-500 text-sm mt-1">Available in: {pub.formats.join(", ")}</p>
+            <p className="text-gray-600 mt-2 text-sm leading-relaxed">{pub.description}</p>
           </div>
         ))}
       </div>
