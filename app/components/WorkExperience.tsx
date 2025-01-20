@@ -1,4 +1,3 @@
-import { Separator } from './separator';
 import { WorkExperienceItem } from '../types/resume';
 import Image from 'next/image';
 

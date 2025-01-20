@@ -104,7 +104,7 @@ export function Header() {
       </div>
 
       {/* Contact Information */}
-      <div className="-mx-6 mt-4 rounded-t-3xl border-t border-white bg-black px-6 py-4">
+      <div className="-mx-6 mt-4 bg-black px-6 py-4">
         <div className="grid grid-cols-2 gap-6">
           <div className="flex flex-col gap-2">
             {leftColumnItems.map((item, index) => (
