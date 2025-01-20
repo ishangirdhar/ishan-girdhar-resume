@@ -18,9 +18,6 @@ export default function Resume() {
           <div className="grid grid-cols-3 gap-6">
             {/* Work Experience Section */}
             <section className="col-span-2">
-              <h2 className="mb-4 rounded-lg bg-gray-900 px-4 py-2 font-display text-2xl font-bold uppercase tracking-wide text-white shadow-md">
-                Work Experience
-              </h2>
               {resumeData.workExperience.map((experience, index) => (
                 <WorkExperience key={index} {...experience} />
               ))}
