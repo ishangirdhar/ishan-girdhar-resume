@@ -27,6 +27,7 @@ export interface WorkExperienceItem {
   description?: string;
   achievements: string[];
   contact?: string;
+  logoUrl?: string;
 }
 
 export interface EducationItem {

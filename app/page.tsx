@@ -18,9 +18,7 @@ export default function Resume() {
           <div className="grid grid-cols-3 gap-6">
             {/* Work Experience Section */}
             <section className="col-span-2">
-              {resumeData.workExperience.map((experience, index) => (
-                <WorkExperience key={index} {...experience} />
-              ))}
+              <WorkExperience experiences={resumeData.workExperience} />
             </section>
 
             {/* Right Column */}
