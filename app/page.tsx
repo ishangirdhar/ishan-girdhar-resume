@@ -14,8 +14,8 @@ export default function Resume() {
     <div className="bg-gray-100 p-8">
       <div className="max-w-5xl mx-auto bg-white shadow-lg">
         {/* Header Section */}
-        <header className="bg-gray-900 text-white p-8">
-          <div className="flex justify-between gap-8">
+        <header className="bg-gray-900 text-white p-8 pb-0">
+          <div className="flex justify-between gap-8 mb-8">
             <div className="flex-shrink-0">
               <Image
                 src="/ishangirdhar.png"
@@ -39,7 +39,7 @@ export default function Resume() {
           </div>
 
           {/* Contact Information */}
-          <div className="bg-black -mx-8 mt-4 px-8 py-6">
+          <div className="bg-black -mx-8 px-8 py-6">
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-2">
                 <ContactItem
