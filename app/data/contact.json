@@ -1,0 +1,39 @@
+{
+  "header": {
+    "name": "Ishan Girdhar",
+    "title": "Cyber Security Leader with 15+ years of Experience",
+    "description": "Seasoned Information Security Leader with 15 years of experience, including CISO roles at Funding Societies and Zai. Proven expertise in designing and executing platform application security and Bug Bounty programs, aligning security with core business goals. Success in mitigating risks, optimizing security investments, and driving scalable solutions that support business growth—all while maintaining budget discipline. Skilled at fostering a security culture without compromising innovation."
+  },
+  "leftColumn": [
+    {
+      "icon": "faEnvelope",
+      "href": "mailto:ishan@ishangirdhar.com",
+      "text": "ishan@ishangirdhar.com"
+    },
+    {
+      "icon": "faPhone",
+      "text": "+65-97528696"
+    },
+    {
+      "icon": "faLocationDot",
+      "text": "Singapore"
+    }
+  ],
+  "rightColumn": [
+    {
+      "icon": "faGlobe",
+      "href": "https://www.ishangirdhar.com",
+      "text": "https://www.ishangirdhar.com"
+    },
+    {
+      "icon": "faLinkedin",
+      "href": "https://linkedin.com/in/ishangirdhar",
+      "text": "linkedin.com/in/ishangirdhar"
+    },
+    {
+      "icon": "faGithub",
+      "href": "https://github.com/ishangirdhar",
+      "text": "github.com/ishangirdhar"
+    }
+  ]
+} 

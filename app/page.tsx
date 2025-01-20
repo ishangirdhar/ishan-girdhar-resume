@@ -28,10 +28,10 @@ export default function Resume() {
 
             {/* Right Column */}
             <div className="space-y-6">
-              <SoftSkills />
+              {/* <SoftSkills /> */}
               <Education />
-              <Publications />
               <Certifications />
+              <Publications />
               <TechnicalSkills />
             </div>
           </div>
