@@ -76,8 +76,8 @@ export default function Resume() {
           <div className="grid grid-cols-3 gap-4">
             {/* Work Experience Section */}
             <section className="col-span-2">
-              <h2 className="text-2xl font-bold text-gray-800 border-b-2 border-gray-300 pb-2 mb-6">
-                WORK EXPERIENCE
+              <h2 className="text-2xl font-bold mb-6 py-2 px-4 bg-gray-900 text-white rounded-lg shadow-md uppercase tracking-wide">
+                Work Experience
               </h2>
               <WorkExperience
                 title="Senior Manager, Security Consulting"
@@ -316,8 +316,8 @@ function SkillsSection() {
 
   return (
     <section>
-      <h2 className="text-2xl font-bold text-gray-800 border-b-2 border-gray-300 pb-2 mb-6">
-        SOFT SKILLS
+      <h2 className="text-2xl font-bold mb-6 py-2 px-4 bg-gray-900 text-white rounded-lg shadow-md uppercase tracking-wide">
+        Soft Skills
       </h2>
       <div className="space-y-2">
         {skills.map((skill, index) => (
@@ -363,8 +363,8 @@ function TechnicalSkillsSection() {
 
   return (
     <section>
-      <h2 className="text-2xl font-bold text-gray-800 border-b-2 border-gray-300 pb-2 mb-6">
-        TECHNICAL SKILLS
+      <h2 className="text-2xl font-bold mb-6 py-2 px-4 bg-gray-900 text-white rounded-lg shadow-md uppercase tracking-wide">
+        Technical Skills
       </h2>
       <div className="space-y-4">
         {skills.map((skill, index) => (
@@ -396,8 +396,8 @@ function CertificationsSection() {
 
   return (
     <section>
-      <h2 className="text-2xl font-bold text-gray-800 border-b-2 border-gray-300 pb-2 mb-6">
-        CERTIFICATIONS
+      <h2 className="text-2xl font-bold mb-6 py-2 px-4 bg-gray-900 text-white rounded-lg shadow-md uppercase tracking-wide">
+        Certifications
       </h2>
       <div className="space-y-4">
         {certifications.map((cert, index) => (
