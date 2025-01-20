@@ -1,11 +1,5 @@
-interface PublicationProps {
-  title: string;
-  authors: string[];
-  date: string;
-  publisher: string;
-  formats: string[];
-  description: string;
-}
+import resumeData from '../data/resume.json';
+import { PublicationItem } from '../types/resume';
 
 export function Publications() {
   return (
@@ -14,7 +8,7 @@ export function Publications() {
         Publications
       </h2>
       <div className="space-y-3">
-        {publicationsData.map((pub, index) => (
+        {resumeData.publications.map((pub: PublicationItem, index: number) => (
           <div key={index}>
             <h3 className="font-bold font-display">{pub.title}</h3>
             <p className="text-gray-700 mt-0.5">By {pub.authors.join(", ")}</p>
@@ -26,15 +20,4 @@ export function Publications() {
       </div>
     </section>
   );
-}
-
-export const publicationsData: PublicationProps[] = [
-  {
-    title: "Kali Linux Intrusion and Exploitation Cookbook",
-    authors: ["Ishan Girdhar", "Dhruv Shah"],
-    date: "April 21, 2017",
-    publisher: "Packt Publishing",
-    formats: ["Hardcopy", "Paperback", "Kindle"],
-    description: "Authored 'Kali Linux Intrusion and Exploitation Cookbook' ideal for system administrators and system architects. Published by Packt Pub, Available on Amazon."
-  }
-]; 
+} 

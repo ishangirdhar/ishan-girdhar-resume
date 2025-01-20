@@ -1,3 +1,5 @@
+import resumeData from '../data/resume.json';
+
 export function SoftSkills() {
   return (
     <section>
@@ -5,7 +7,7 @@ export function SoftSkills() {
         Soft Skills
       </h2>
       <div className="space-y-1.5">
-        {softSkillsData.map((skill, index) => (
+        {resumeData.softSkills.map((skill: string, index: number) => (
           <span
             key={index}
             className="inline-block bg-gray-200 rounded-full px-4 py-1 text-sm font-medium text-gray-700 mr-2 mb-1.5"

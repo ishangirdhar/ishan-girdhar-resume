@@ -1,9 +1,5 @@
-interface EducationItemProps {
-  degree: string;
-  university: string;
-  period: string;
-  location: string;
-}
+import resumeData from '../data/resume.json';
+import { EducationItem } from '../types/resume';
 
 export function Education() {
   return (
@@ -12,7 +8,7 @@ export function Education() {
         Education
       </h2>
       <div className="space-y-3">
-        {educationData.map((edu, index) => (
+        {resumeData.education.map((edu: EducationItem, index: number) => (
           <div key={index}>
             <h3 className="font-bold font-display">{edu.degree}</h3>
             <p className="text-gray-700 mt-0.5">{edu.university}</p>
@@ -24,19 +20,4 @@ export function Education() {
       </div>
     </section>
   );
-}
-
-export const educationData: EducationItemProps[] = [
-  {
-    degree: "Master of Computer Applications (M.C.A.)",
-    university: "Sikkim Manipal University",
-    period: "08/2011 - 03/2013",
-    location: "New Delhi, India"
-  },
-  {
-    degree: "Bachelor of Computer Applications (B.C.A)",
-    university: "Guru Gobind Singh Indraprastha University",
-    period: "08/2007 - 05/2010",
-    location: "New Delhi, India"
-  }
-]; 
+} 

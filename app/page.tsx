@@ -8,12 +8,13 @@ import {
 import Image from "next/image";
 import Link from 'next/link';
 import React from 'react';
-import { WorkExperience, workExperienceData } from './components/WorkExperience';
+import { WorkExperience } from './components/WorkExperience';
 import { Education } from './components/Education';
 import { SoftSkills } from './components/SoftSkills';
 import { Publications } from './components/Publications';
 import { Certifications } from './components/Certifications';
 import { TechnicalSkills } from './components/TechnicalSkills';
+import resumeData from './data/resume.json';
 
 export default function Resume() {
   return (
@@ -85,7 +86,7 @@ export default function Resume() {
               <h2 className="text-2xl font-bold font-display mb-4 py-2 px-4 bg-gray-900 text-white rounded-lg shadow-md uppercase tracking-wide">
                 Work Experience
               </h2>
-              {workExperienceData.map((experience, index) => (
+              {resumeData.workExperience.map((experience, index) => (
                 <WorkExperience key={index} {...experience} />
               ))}
             </section>
