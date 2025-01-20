@@ -26,9 +26,9 @@ export default function Resume() {
               />
             </div>
             <div>
-              <h1 className="text-5xl font-bold">Ishan Girdhar</h1>
-              <h2 className="text-xl text-indigo-300 mt-2">Cyber Security Leader with 15+ years of experience</h2>
-              <p className="mt-2 text-gray-300 max-w-5xl">
+              <h1 className="text-5xl font-bold font-display tracking-tight">Ishan Girdhar</h1>
+              <h2 className="text-xl text-indigo-300 mt-2 font-display font-medium tracking-wide">Cyber Security Leader with 15+ years of experience</h2>
+              <p className="mt-2 text-gray-300 max-w-5xl font-sans leading-relaxed">
                 Seasoned Information Security Leader with 15 years of experience, including CISO roles at Funding Societies and Zai. 
                 Proven expertise in designing and executing platform application security and Bug Bounty programs, aligning security 
                 with core business goals. Success in mitigating risks, optimizing security investments, and driving scalable 
@@ -76,13 +76,12 @@ export default function Resume() {
           <div className="grid grid-cols-3 gap-4">
             {/* Work Experience Section */}
             <section className="col-span-2">
-              <h2 className="text-2xl font-bold mb-6 py-2 px-4 bg-gray-900 text-white rounded-lg shadow-md uppercase tracking-wide">
+              <h2 className="text-2xl font-bold font-display mb-6 py-2 px-4 bg-gray-900 text-white rounded-lg shadow-md uppercase tracking-wide">
                 Work Experience
               </h2>
               <WorkExperience
                 company="Accenture"
                 title="Senior Manager, Security Consulting"
-
                 period="08/2022 - Present"
                 location="Singapore"
                 description="Accenture is an Irish-American professional services company based in Dublin, specializing in information technology services and consulting."
@@ -95,8 +94,8 @@ export default function Resume() {
               />
 
               <WorkExperience
-                title="Head of Information Security"
                 company="Zai Australia Pty. Ltd."
+                title="Head of Information Security"
                 period="02/2021 - 07/2022"
                 location="Singapore"
                 description="Zai helps customers build automated payment workflows & payment gateways through APIs."
@@ -109,8 +108,8 @@ export default function Resume() {
               />
 
               <WorkExperience
-                title="Head of Information Security"
                 company="Funding Societies Pte. Ltd."
+                title="Head of Information Security"
                 period="09/2019 - 02/2021"
                 location="Singapore"
                 description="Peer-to-peer lending, Capital Market Services operating in Singapore, Malaysia and Indonesia."
@@ -123,8 +122,8 @@ export default function Resume() {
               />
 
               <WorkExperience
-                title="Information Security Engineering Manager (Product Security)"
                 company="Grabtaxi Holding Pte. Ltd."
+                title="Information Security Engineering Manager (Product Security)"
                 period="11/2016 - 07/2019"
                 location="Singapore"
                 description="Grab is Southeast Asia's #1 ride-hailing app for private cars & taxis."
@@ -138,8 +137,8 @@ export default function Resume() {
               />
 
               <WorkExperience
-                title="Senior Security Engineer"
                 company="InMobi"
+                title="Senior Security Engineer"
                 period="06/2015 - 06/2016"
                 location="Bangalore, India"
                 achievements={[
@@ -151,8 +150,8 @@ export default function Resume() {
               />
 
               <WorkExperience
-                title="Information Security Engineer - Level 3"
                 company="eBay PayPal"
+                title="Information Security Engineer - Level 3"
                 period="11/2013 - 02/2015"
                 location="Bangalore, India"
                 description="PayPal is a safer payment method recommended by eBay."
@@ -164,8 +163,8 @@ export default function Resume() {
               />
 
               <WorkExperience
-                title="Consultant"
                 company="Aujas Networks Pvt Ltd"
+                title="Consultant"
                 period="11/2012 - 11/2013"
                 location="Gurugram"
                 description="Aujas specializes in building and transforming cybersecurity postures for businesses, focusing on mitigating risks through Identity and Access Management, Risk Advisory, and Managed Detection and Response services."
@@ -180,8 +179,8 @@ export default function Resume() {
               />
 
               <WorkExperience
-                title="Infosec Consultant"
                 company="AKS Information Technology Services"
+                title="Infosec Consultant"
                 period="11/2010 - 11/2012"
                 location="Noida, India"
                 description="AKS IT delivers a diverse portfolio of IT security services, including Information Risk Management, Cyber Forensics, Incident Response, and SOC design and implementation. With a client base of over 110 organizations, including government and PSUs, AKS IT serves high-impact sectors such as manufacturing, banking, telecom, and pharmaceuticals."
@@ -194,8 +193,8 @@ export default function Resume() {
               />
 
               <WorkExperience
-                title="Security Researcher & Trainer"
                 company="Innobuzz Knowledge Solutions"
+                title="Security Researcher & Trainer"
                 period="05/2010 - 11/2010"
                 location="Delhi, India"
                 description="Responsible for developing and implementing security training programs, and security education learning modules."
@@ -258,8 +257,8 @@ function ContactItem({ icon, href, text }: ContactItemProps) {
 // EmailIcon, LocationIcon, GithubIcon, PhoneIcon, LinkedInIcon components...
 
 interface WorkExperienceProps {
-  title: string;
   company: string;
+  title: string;
   period: string;
   location: string;
   description?: string;
@@ -268,8 +267,8 @@ interface WorkExperienceProps {
 }
 
 function WorkExperience({
-  title,
   company,
+  title,
   period,
   location,
   description,
@@ -279,19 +278,19 @@ function WorkExperience({
   return (
     <div className="mb-8">
       <div className="flex justify-between items-baseline">
-        <h3 className="text-xl font-bold">{title}</h3>
-        <span className="text-gray-600">{period}</span>
+        <h3 className="text-xl font-bold font-display tracking-tight">{company}</h3>
+        <span className="text-gray-600 font-medium">{period}</span>
       </div>
       <div className="flex justify-between items-baseline">
-        <h4 className="text-lg text-gray-700">{company}</h4>
+        <h4 className="text-lg text-gray-700 font-display">{title}</h4>
         <span className="text-gray-600">{location}</span>
       </div>
       {description && (
-        <p className="text-gray-600 italic mt-2">{description}</p>
+        <p className="text-gray-600 italic mt-2 font-serif leading-relaxed">{description}</p>
       )}
       <div className="mt-4">
-        <h5 className="font-semibold">Achievements/Tasks</h5>
-        <ul className="list-disc ml-5 mt-2 space-y-2">
+        <h5 className="font-semibold font-display">Achievements/Tasks</h5>
+        <ul className="list-disc ml-5 mt-2 space-y-2 leading-relaxed">
           {achievements.map((achievement, index) => (
             <li key={index}>{achievement}</li>
           ))}
@@ -300,7 +299,7 @@ function WorkExperience({
       {contact && (
         <div className="mt-4">
           <p className="text-gray-700">
-            <span className="font-semibold">Contact:</span> {contact}
+            <span className="font-semibold font-display">Contact:</span> {contact}
           </p>
         </div>
       )}
@@ -317,14 +316,14 @@ function SkillsSection() {
 
   return (
     <section>
-      <h2 className="text-2xl font-bold mb-6 py-2 px-4 bg-gray-900 text-white rounded-lg shadow-md uppercase tracking-wide">
+      <h2 className="text-2xl font-bold font-display mb-6 py-2 px-4 bg-gray-900 text-white rounded-lg shadow-md uppercase tracking-wide">
         Soft Skills
       </h2>
       <div className="space-y-2">
         {skills.map((skill, index) => (
           <span
             key={index}
-            className="inline-block bg-gray-200 rounded-full px-4 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+            className="inline-block bg-gray-200 rounded-full px-4 py-1 text-sm font-medium text-gray-700 mr-2 mb-2"
           >
             {skill}
           </span>
@@ -364,14 +363,14 @@ function TechnicalSkillsSection() {
 
   return (
     <section>
-      <h2 className="text-2xl font-bold mb-6 py-2 px-4 bg-gray-900 text-white rounded-lg shadow-md uppercase tracking-wide">
+      <h2 className="text-2xl font-bold font-display mb-6 py-2 px-4 bg-gray-900 text-white rounded-lg shadow-md uppercase tracking-wide">
         Technical Skills
       </h2>
       <div className="space-y-4">
         {skills.map((skill, index) => (
           <div key={index}>
-            <h3 className="font-bold">{skill.title}</h3>
-            <p className="text-gray-700">{skill.description}</p>
+            <h3 className="font-bold font-display">{skill.title}</h3>
+            <p className="text-gray-700 leading-relaxed">{skill.description}</p>
           </div>
         ))}
       </div>
@@ -397,15 +396,15 @@ function CertificationsSection() {
 
   return (
     <section>
-      <h2 className="text-2xl font-bold mb-6 py-2 px-4 bg-gray-900 text-white rounded-lg shadow-md uppercase tracking-wide">
+      <h2 className="text-2xl font-bold font-display mb-6 py-2 px-4 bg-gray-900 text-white rounded-lg shadow-md uppercase tracking-wide">
         Certifications
       </h2>
       <div className="space-y-4">
         {certifications.map((cert, index) => (
           <div key={index}>
-            <h3 className="font-bold">{`${index + 1}. ${cert.title}`}</h3>
+            <h3 className="font-bold font-display">{`${index + 1}. ${cert.title}`}</h3>
             <p className="text-gray-600">{cert.period}</p>
-            <p className="text-gray-500 text-sm">
+            <p className="text-gray-500 text-sm leading-relaxed">
               {cert.issuer} (License: {cert.license})
             </p>
           </div>

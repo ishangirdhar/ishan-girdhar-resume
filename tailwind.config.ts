@@ -3,9 +3,9 @@ import { type Config } from "tailwindcss"
 export default {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
     './src/**/*.{ts,tsx}',
 	],
   theme: {
@@ -56,6 +56,19 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      fontFamily: {
+        sans: ['var(--font-source-sans)', 'system-ui'],
+        serif: ['var(--font-lora)', 'Georgia'],
+        display: ['var(--font-inter)', 'system-ui'],
+      },
+      typography: {
+        DEFAULT: {
+          css: {
+            lineHeight: '1.6',
+            letterSpacing: '-0.01em',
+          },
+        },
       },
     },
   },
