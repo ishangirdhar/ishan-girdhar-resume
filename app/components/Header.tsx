@@ -4,7 +4,7 @@ import { faEnvelope, faGlobe, faLocationDot, faPhone } from '@fortawesome/free-s
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import contactData from '../data/contact.json';
+import resumeData from '../data/resume.json';
 
 interface ContactItemProps {
   icon: any;
@@ -45,6 +45,41 @@ function ContactItem({ icon, href, text }: ContactItemProps) {
 }
 
 export function Header() {
+  const { header } = resumeData;
+  const contactItems = [
+    {
+      icon: 'faEnvelope',
+      href: `mailto:${header.contact.email}`,
+      text: header.contact.email,
+    },
+    {
+      icon: 'faPhone',
+      text: header.contact.phone,
+    },
+    {
+      icon: 'faLocationDot',
+      text: header.contact.location,
+    },
+    {
+      icon: 'faGlobe',
+      href: 'https://www.ishangirdhar.com',
+      text: 'www.ishangirdhar.com',
+    },
+    {
+      icon: 'faLinkedin',
+      href: `https://${header.contact.linkedin}`,
+      text: header.contact.linkedin,
+    },
+    {
+      icon: 'faGithub',
+      href: `https://${header.contact.github}`,
+      text: header.contact.github,
+    },
+  ];
+
+  const leftColumnItems = contactItems.slice(0, 3);
+  const rightColumnItems = contactItems.slice(3);
+
   return (
     <header className="shadow-3xl bg-gray-900 p-6 pb-0 text-white">
       <div className="mb-2 flex justify-between gap-6">
@@ -58,14 +93,12 @@ export function Header() {
           />
         </div>
         <div>
-          <h1 className="font-display text-5xl font-bold tracking-tight">
-            {contactData.header.name}
-          </h1>
+          <h1 className="font-display text-5xl font-bold tracking-tight">{header.name}</h1>
           <h2 className="mt-1.5 font-display text-xl font-medium tracking-wide text-indigo-300">
-            {contactData.header.title}
+            {header.title}
           </h2>
           <p className="mt-1.5 max-w-5xl font-sans leading-relaxed text-gray-300">
-            {contactData.header.description}
+            {header.summary}
           </p>
         </div>
       </div>
@@ -74,12 +107,12 @@ export function Header() {
       <div className="-mx-6 mt-4 rounded-t-3xl border-t border-white bg-black px-6 py-4">
         <div className="grid grid-cols-2 gap-6">
           <div className="flex flex-col gap-2">
-            {contactData.leftColumn.map((item, index) => (
+            {leftColumnItems.map((item, index) => (
               <ContactItem key={index} {...item} />
             ))}
           </div>
           <div className="flex flex-col gap-2">
-            {contactData.rightColumn.map((item, index) => (
+            {rightColumnItems.map((item, index) => (
               <ContactItem key={index} {...item} />
             ))}
           </div>
