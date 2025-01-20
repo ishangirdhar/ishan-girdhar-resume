@@ -11,11 +11,11 @@ import React from 'react';
 
 export default function Resume() {
   return (
-    <div className="bg-gray-100 p-8">
-      <div className="max-w-5xl mx-auto bg-white shadow-lg">
+    <div className="bg-zinc-300 p-8">
+      <div className="max-w-5xl mx-auto bg-white shadow-3xl">
         {/* Header Section */}
-        <header className="bg-gray-900 text-white p-8 pb-0">
-          <div className="flex justify-between gap-8 mb-8">
+        <header className="bg-gray-900 text-white p-8 pb-0 shadow-3xl">
+          <div className="flex justify-between gap-8 mb-3">
             <div className="flex-shrink-0">
               <Image
                 src="/ishangirdhar.png"
@@ -26,9 +26,9 @@ export default function Resume() {
               />
             </div>
             <div>
-              <h1 className="text-4xl font-bold">Ishan Girdhar</h1>
-              <h2 className="text-xl text-indigo-300 mt-2">Senior Manager, Security Consulting | Former CISO</h2>
-              <p className="mt-4 text-gray-300 max-w-3xl">
+              <h1 className="text-5xl font-bold">Ishan Girdhar</h1>
+              <h2 className="text-xl text-indigo-300 mt-2">Cyber Security Leader with 15+ years of experience</h2>
+              <p className="mt-2 text-gray-300 max-w-5xl">
                 Seasoned Information Security Leader with 15 years of experience, including CISO roles at Funding Societies and Zai. 
                 Proven expertise in designing and executing platform application security and Bug Bounty programs, aligning security 
                 with core business goals. Success in mitigating risks, optimizing security investments, and driving scalable 
@@ -80,8 +80,9 @@ export default function Resume() {
                 Work Experience
               </h2>
               <WorkExperience
-                title="Senior Manager, Security Consulting"
                 company="Accenture"
+                title="Senior Manager, Security Consulting"
+
                 period="08/2022 - Present"
                 location="Singapore"
                 description="Accenture is an Irish-American professional services company based in Dublin, specializing in information technology services and consulting."
