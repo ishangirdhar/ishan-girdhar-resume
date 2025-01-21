@@ -17,17 +17,17 @@ export default function Resume() {
         <main className="px-2 py-2">
           <div className="grid grid-cols-3 gap-6">
             {/* Work Experience Section */}
-            <section className="col-span-2">
-              <WorkExperience experiences={resumeData.workExperience} />
-            </section>
-
-            {/* Right Column */}
-            <div className="space-y-6">
+            <section className="col-span-1">
               {/* <SoftSkills /> */}
               <Certifications />
               <Education />
               <Publications />
               <TechnicalSkills />
+            </section>
+
+            {/* Right Column */}
+            <div className="col-span-2 space-y-6">
+              <WorkExperience experiences={resumeData.workExperience} />
             </div>
           </div>
         </main>

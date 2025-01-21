@@ -12,17 +12,17 @@ function WorkExperienceEntry({
   logoUrl,
 }: WorkExperienceItem) {
   return (
-    <div className="mb-6 border-b border-gray-200 pb-6 last:mb-0 last:border-b-0 last:pb-0">
-      <div className="flex items-center justify-between rounded-lg bg-gray-900 p-2">
+    <div className="mb-6 border-b border-gray-900 pb-6 last:mb-0 last:border-b-0 last:pb-0">
+      <div className="flex items-center justify-between rounded-lg">
         <div className="flex items-center gap-3">
           {logoUrl && (
-            <div className="relative h-10 w-10 overflow-hidden rounded-full">
+            <div className="relative h-5 w-5 overflow-hidden rounded-full">
               <Image src={logoUrl} alt={`${company} logo`} fill className="object-cover" />
             </div>
           )}
-          <h3 className="font-display text-xl font-bold tracking-tight text-white">{company}</h3>
+          <h3 className="font-display text-xl font-bold tracking-tight">{company}</h3>
         </div>
-        <span className="font-medium text-indigo-100">{period}</span>
+        <span className="font-medium">{period}</span>
       </div>
       <div className="mt-1 flex items-baseline justify-between">
         <h4 className="font-display text-lg font-semibold">{title}</h4>
