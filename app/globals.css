@@ -296,42 +296,40 @@ body {
     padding: 0 !important;
   }
 
-  /* Work Experience specific */
+  /* Work Experience specific adjustments */
   .work-experience-item {
-    margin: 0 !important;
-    padding: 0 !important;
-    border: none !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .work-experience-item h3 {
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    margin-bottom: 0.25rem !important;
     display: block !important;
   }
 
-  .work-experience-item > * {
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  .work-experience-item h3,
-  .work-experience-item .company-title,
   .work-experience-item .period,
   .work-experience-item .location {
-    display: inline !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    line-height: 1 !important;
+    font-size: 0.9rem !important;
+    color: #666 !important;
+    margin-bottom: 0.25rem !important;
+    display: block !important;
   }
 
-  .work-experience-item .period,
-  .work-experience-item .location {
-    margin-left: 0.25rem !important;
-    font-size: 0.85rem !important;
+  .work-experience-item .description {
+    font-size: 0.9rem !important;
+    margin-bottom: 0.25rem !important;
   }
 
   .work-experience-item ul {
-    margin-top: 0 !important;
-    padding-left: 1rem !important;
+    margin-top: 0.25rem !important;
+    padding-left: 1.5rem !important;
   }
 
   .work-experience-item li {
-    line-height: 1 !important;
+    font-size: 0.9rem !important;
+    margin-bottom: 0.25rem !important;
+    line-height: 1.25 !important;
   }
 
   /* Container spacing */
@@ -403,14 +401,27 @@ body {
   /* Grid layout adjustments */
   .grid.grid-cols-3 {
     display: grid !important;
-    grid-template-columns: 2fr 1fr !important;
+    grid-template-columns: 1fr 2fr !important;  /* Left column (1fr) for Certifications, Right column (2fr) for Work Experience */
     gap: 0.75rem !important;
     break-inside: avoid !important;
     page-break-inside: avoid !important;
   }
 
+  /* Ensure certifications and other sections are in left column */
+  .col-span-1 {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+  }
+
+  /* Ensure work experience is in right column */
   .col-span-2 {
-    grid-column: span 1 !important;
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+  }
+
+  /* Maintain spacing */
+  .space-y-6 {
+    margin-top: 0.5rem !important;
   }
 
   /* Reduce padding */
